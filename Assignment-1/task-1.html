@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Learn JavaScript</title>
+    <script>
+        /*
+        This code will not work because 
+        the script file is in 
+        the head and there is no event to run
+        */
+        document.getElementById("el").style.color = "red";
+    </script>
+    <script>
+        /*
+        Code Two
+        The second will work because 
+        there is an event
+        */
+        window.onload = function () {
+            document.getElementById("el").style.color = "red";
+        };
+    </script>
+</head>
+
+<body>
+    <h1 id="el">Page Title</h1>
+    <script>
+        /*
+          Code Three
+          The third will work because 
+          the java script file is stored in the last body
+        */
+        document.getElementById("el").style.color = "red";
+    </script>
+</body>
+
+</html>

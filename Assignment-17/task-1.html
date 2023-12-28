@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Learn JavaScript</title>
+    <script>
+        window.onload = function () {
+        // let open = document.body.children[1];
+        // open.click();
+        let p = document.body.children;
+        for (let i = 0 ; i < p.length; i++) {
+            if (p[i].className === "open" && p[i].getAttribute("href") === "https://elzero.org" ) {
+            p[i].click();
+            }
+        }
+        }
+    </script>
+    </head>
+    <body>
+    <a class="open" href="https://google.com">Google</a>
+    <a class="open" href="https://elzero.org">Elzero</a>
+    <a class="not" href="https://facebook.com">Facebook</a>
+    <a class="linked" href="https://linkedin.com">Elzero</a>
+    </body>
+</html>

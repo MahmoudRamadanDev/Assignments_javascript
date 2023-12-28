@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function getDetails(zName, zAge, zCountry) {
+    let age =  "Your Age Is";
+    let country = `You Live In `;
+  function namePattern(zName) {
+// //     // Write Your Code Here  ["Mahmoud","Ramadan"];
+// //     // Osama Mohamed => Osama M.
+// //     // Ahmed ali => Ahmed A.
+   return `Hello ${zName.split(" ")[0]} ${zName.split(" ")[1][0].toUpperCase()}.`;
+  }
+
+  function ageWithMessage(zAge) {
+    // Write Your Code Here
+    // 38 Is My Age => Your Age Is 38
+    // 32 Is The Age => Your Age Is 32
+    return `${age} ${parseInt(zAge)},`;
+  }
+  // ======================================
+ // for (let i = 0; i < zAge.length; i++) {
+  // if ( typeof zAge[i] ==="number") {
+  // x += zAge[i];
+  // }
+  // }
+  // return x;
+  // =======================================
+  function countryTwoLetters(zCountry) {
+  //   // Write Your Code Here
+  //   // Egypt => You Live In EG
+  //   // Syria => You Live In SY
+    return `${country} ${zCountry.slice(0,2).toUpperCase()} `;
+  }
+//   
+
+  function fullDetails() {
+  //   // Write Your Code Here
+    return`${namePattern(zName)} ${ageWithMessage(zAge)} ${countryTwoLetters(zCountry)}`;
+}
+return fullDetails(); // Do Not Edit This
+    }
+console.log(getDetails("Osama Mohamed", " 31 Is My  Age", "Egypt"));
+// Hello Osama M., Your Age Is 38, You Live In EG 
+
+console.log(getDetails("Ahmed ali", " 32 Is The Age", "Syria"));
+// Hello Ahmed A., Your Age Is 32, You Live In SY
+    </script>
+</body>
+</html>

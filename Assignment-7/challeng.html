@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // let st = "Elzero Web School";
+    // console.log(st.indexOf("W"));
+//     if ( st.indexOf("W") === "w") {
+//   console.log("Good");
+// }
+// if (  st !== "string") {
+//   console.log("Good");
+// } 
+// if (st ?? "number" === "number") {
+//   console.log("Good");
+// }
+// if ( st || "ElzeroElzero"  === "ElzeroElzero") {
+//   console.log("Good");
+// }
+// //  .slice(0,6).repeat(2)
+// if ( st ?? "34" === "34" ) {
+//     console.log("Good");
+// }
+// حل اخر
+
+
+
+
+
+let st = "Elzero Web School";
+if (st[st.indexOf("W")].toLowerCase() === "w") {
+  console.log("Good");
+}
+if (st !== "string") {
+  console.log("Good");
+}  
+if (typeof st.length  === "number") {
+  console.log("Good");
+}
+
+if ( st .slice(0,6).repeat(2)  === "ElzeroElzero") {
+  console.log("Good");
+}
+if ((st.length * 2).toString() === "34" ) {
+    console.log("Good");
+}
+
+
+
+
+
+
+
+
+
+// challeng conditional ternary operator 
+let a = 10;
+
+if (a < 10) {
+  console.log(10);
+} else if (a >= 10 && a <= 40) {
+  console.log("10 To 40");
+} else if (a > 40) {
+  console.log("> 40");
+} else {
+  console.log("Unknown");
+}
+    a < 10 ? console.log(10) : a >= 10 && a <= 40 ? console.log("10 To 40") : a > 40 ? console.log("> 40") : console.log("Unknown")
+    </script>
+</body>
+</html>

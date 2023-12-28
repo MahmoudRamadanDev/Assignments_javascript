@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // important
+    let myString = "1,2,3,EE,l,z,e,r,o,_,W,e,b,_,S,c,h,o,o,l,2,0,Z"
+let solution = myString.split('').map(function (element,index,arr) {
+  return element !== ',' && element !== 'Z' && element !== arr[index - +true] ? element : " "; 
+}).filter(function (element,index) {
+  return isNaN(element) 
+}).reduce(function (acc, curr) {
+    return  curr === '_' ?  acc + ' '  : acc + curr ;
+})
+ 
+console.log(solution);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//      let  name = "";
+//     let age = "";
+//     let status = "";
+//     function checkStatus(a, b, c) {
+//   // Your Code Here
+//     for ( let i = 0; i < arguments.length; i++) {
+//     // ==========================
+//     if ( typeof arguments[i] ==="string" ) {
+//     name=arguments[i];
+//     }else if ( typeof arguments[i] =="number" ) {
+//     age=arguments[i];
+//     }else if (  arguments[i] === true ) {
+//     status=" You Are Available For Hire";
+//     }else if ( arguments[i] === false ) {
+//     status="You Are Not Available For Hire";
+//     }
+//     // ==========================
+//     }
+//     return `"Hello ${name},Your Age Is ${age} ${status}"`;
+//     }
+
+//     // Needed Output
+//  let total = checkStatus("Osama", 38 ,true );  // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+//     console.log(total);
+
+//     let result = checkStatus(38, "Osama", true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+//     console.log(result);
+
+//     let sum =  checkStatus(true, "Osama", 38); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+//     console.log(sum);
+
+//     let num =   checkStatus(false, "Osama", 38); // "Hello Osama, Your Age Is 38, You Are Not Available For Hire"
+//     console.log(num);
+// ===================================================================================================================
+
+    function checkStatus(a, b, c) {
+  // Your Code Here
+  let name = "";
+  let age = "";
+  let status ="";
+    for ( let i = 0; i < arguments.length; i++) {
+    // ==========================
+    if ( typeof arguments[i] ==="string" ) {
+     name = arguments[i];
+    }else if ( typeof arguments[i] =="number" ) {
+    age = arguments[i];
+    }else if ( typeof arguments[i] =="boolean" ) {
+    if ( arguments[i] === true ) {
+      status = "You Are Available For Hire";
+    }else if ( arguments[i] == false) {
+      status = "You Are Not Available For Hire";
+    }
+    }
+  
+    }
+    // ==========================
+    return `"Hello ${name},Your Age Is ${age} ${status}"`;
+    }
+    
+    // Needed Output
+ let total = checkStatus("Osama", 38 ,true );  // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+    console.log(total);
+
+    let result = checkStatus(38, true , "Osama"); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+    console.log(result);
+
+    let sum =  checkStatus(true, "Osama", 38); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+    console.log(sum);
+
+    let num =   checkStatus(false, "Osama", 38); // "Hello Osama, Your Age Is 38, You Are Not Available For Hire"
+    console.log(num);
+console.log(status);
+    </script>
+</body>
+</html>

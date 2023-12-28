@@ -1,0 +1,10 @@
+div {
+    font-size: 20px;
+    line-height: 1;
+    /* background-color: green; */
+    cursor: pointer;
+}
+
+button {
+    background-color: red;
+}

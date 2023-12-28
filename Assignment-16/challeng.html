@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            margin: 100px auto;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        form input , select {
+            margin-bottom: 20px;
+        }
+        [name = 'create'] {
+            background-color: #00929f;
+            outline: none;
+            border: none;
+            color: white;
+            padding: 6px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .results {
+            width: 60%;
+            margin: 30px auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+  <input type="number" name="elements" class="input" placeholder="Number Of Elements" />
+  <input type="text" name="texts" class="input" placeholder="Elements Text" />
+  <select name="type" class="input">
+    <option value="Div">Div</option>
+    <option value="Section">Section</option>
+  </select>
+  <input type="submit" name="create" value="Create" />
+  <div class="results"></div>
+</form>
+    <script>
+        let cr = document.querySelector("[name = 'create']");
+        let counterEle = document.querySelector("[name = 'elements']");
+        let texts = document.querySelector("[name = 'texts']");
+        let addRes = document.querySelector(".results");
+        let selectDiv = document.querySelector("[value = 'Div']");
+        let selectSection = document.querySelector("[value = 'Section']");
+        cr.onclick = function (e) {
+        e.preventDefault();
+        addRes.innerHTML = "";
+        for (let i = 0 ; i < parseInt(counterEle.value) ; i++) {
+            let myElement = document.createElement("div");
+            myElement.className = "box";
+            myElement.title = "Element";
+            myElement.id = `id-${i+1}`;
+            myElement.style.color = "white";
+            myElement.style.backgroundColor = "#fc5e21";
+            myElement.style.width = "30%";
+            myElement.style.borderRadius = "5px";
+            myElement.style.padding = "6px";
+            myElement.style.textAlign = "center";
+            myElement.style.marginBottom = "20px";
+            let myElementText = document.createTextNode(texts.value);
+            myElement.appendChild(myElementText);
+            addRes.appendChild(myElement);
+            document.body.appendChild(addRes);
+        }
+        }   
+
+        // let func = function () {
+        // //     for (let i = 0 ; i < parseInt(counterEle.value) ; i++) {
+        // //     let myElement = document.createElement("div");
+        // //     myElement.className = "box";
+        // //     myElement.title = "Element";
+        // //     myElement.id = `id-${i+1}`;
+        // //     myElement.style.color = "white";
+        // //     myElement.style.backgroundColor = "#fc5e21";
+        // //     myElement.style.width = "30%";
+        // //     myElement.style.borderRadius = "5px";
+        // //     myElement.style.padding = "6px";
+        // //     myElement.style.textAlign = "center";
+        // //     myElement.style.marginBottom = "20px";
+        // //     let myElementText = document.createTextNode(texts.value);
+        // //     myElement.appendChild(myElementText);
+        // //     addRes.appendChild(myElement);
+        // //     document.body.appendChild(addRes);
+        // // }
+        // }
+    </script>
+</body>
+</html>
